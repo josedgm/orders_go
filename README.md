@@ -4,7 +4,7 @@ By José David González
 ## System Architecture
 Following Martin Fowler advice, the architecture should start with a simple Monolith implementation. The current state of system orchestration solutions and development collaboration tools allow deploying scalable solutions without incurring in early over-optimizations. 
 
-For this particular project, I’d pick a Kubernetes cluster for production deployment, beccause it will make a the service scalable and easy to manage. 
+For this particular project, I’d pick a Kubernetes cluster for production deployment, because it will make a the service scalable and easy to manage. 
 
 ![System Architecture Diagram](doc/ArchDia.png)
 
