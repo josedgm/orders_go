@@ -38,7 +38,7 @@ The **/orders** endpoint, receives a POST with order(s) data, and has a validato
 
 Through the **/customers/{customerId}/items** endpoint, the user fetches customer data from the DB. It provides error messages if the customerId is not found.
 
-The **/customers/summaries** is used to fetch all clients data from the DB. It calculates the aggregated data for the final report. However,this calculation can also be implemented in the DB engine itself via virtual fields.
+The **/customers/summaries** is used to fetch all clients data from the DB. It calculates the aggregated data for the final report. However, this calculation can also be implemented in the DB engine itself via virtual fields.
 
 The last 2 endpoints contain a function to convert the data into the required JSON format.
 
@@ -48,4 +48,8 @@ The last 2 endpoints contain a function to convert the data into the required JS
 - This also assumes that the item price is the same for all the orders.
 - No authentication nor authorization are implemented.
 - The server is working in plain HTTP. This code is not meant to be production ready.
-- 
+
+## Additional information
+
+- There is a [quick installation and run guide](install.md)
+- There is a [code coverage report](https://htmlpreview.github.io/?https://github.com/josedgm/orders_go/blob/main/coverage.html#file1)
