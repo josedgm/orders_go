@@ -51,5 +51,5 @@ The last 2 endpoints contain a function to convert the data into the required JS
 
 ## Additional information
 
-- There is a [quick installation and run guide](install.md)
-- There is a [code coverage report](https://htmlpreview.github.io/?https://github.com/josedgm/orders_go/blob/main/coverage.html#file1)
+- [Quick installation and run guide](install.md)
+- [Code coverage report](https://htmlpreview.github.io/?https://github.com/josedgm/orders_go/blob/main/coverage.html#file1)
