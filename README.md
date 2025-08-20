@@ -51,38 +51,30 @@ The last 2 endpoints contain a function to convert the data into the required JS
 
 ## Other remarks about the Batch Transform Endpoint
 
-The current return JSON omits a top-level customerId on each list of items to enforce strict adherence to the format used when returning the list of customer items. But it would be better to have a top-level customerId for the list of items for each client. That way the response payload will be reduced and will allow quicker filtering.
+The current return JSON omits a top-level customerId on each list of items to enforce strict adherence to the format used when returning the list of customer items. But it would be better to have a top-level customerId for each customer's list of items. This will reduce the response payload and enable faster filtering..
 
 ```
 [
   {
-    "customerId": "customer1",
+    "customerId": "01",
     "items": [
       {
-        "itemId": "itemA",
+        "itemId": "20201",
         "costEur": 12.5
       },
       {
-        "itemId": "itemB",
+        "itemId": "20202",
         "costEur": 7.9
       },
-      {
-        "itemId": "itemC",
-        "costEur": 5.2
-      }
     ]
   },
   {
-    "customerId": "customer2",
+    "customerId": "02",
     "items": [
       {
-        "itemId": "itemC",
+        "itemId": "20203",
         "costEur": 5.2
       },
-      {
-        "itemId": "itemD",
-        "costEur": 2.5
-      }
     ]
   }
 ]
