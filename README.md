@@ -47,11 +47,11 @@ The last 2 endpoints contain a function to convert the data into the required JS
 - Since the list of all items purchased by an individual customer does not contains the related orderId per item, the returning the list of customer items in the batch processor only has unique items. If an item was ordered in several orders by the same client, it will show only once. 
 - This also assumes that the item price is the same for all the orders.
 - No authentication nor authorization are implemented.
-- The server is working in plain HTTP. This code is not meant to be production ready.
+- The server is working in plain HTTP. This code is not meant to be production ready. A reverse proxy is recommended.  
 
 ## Other remarks about the Batch Transform Endpoint
 
-The current return JSON omits a top-level customerId on each list of items to enforce strict adherence to the format used when returning the list of customer items. But it would be better to have a top-level customerId for each customer's list of items. This will reduce the response payload and enable faster filtering..
+The current return JSON omits a top-level customerId on each list of items to enforce strict adherence to the format used when returning the list of customer items. But it would be better to have a top-level customerId for each customer's list of items. This will reduce the response payload and enable faster filtering.
 
 ```
 [
