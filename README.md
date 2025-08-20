@@ -49,6 +49,46 @@ The last 2 endpoints contain a function to convert the data into the required JS
 - No authentication nor authorization are implemented.
 - The server is working in plain HTTP. This code is not meant to be production ready.
 
+## Other remarks about the Batch Transform Endpoint
+
+The current return JSON omits a top-level customerId on each list of items to enforce strict adherence to the format used when returning the list of customer items. But it would be better to have a top-level customerId for the list of items for each client. That way the response payload will be reduced and will allow quicker filtering.
+
+```
+[
+  {
+    "customerId": "customer1",
+    "items": [
+      {
+        "itemId": "itemA",
+        "costEur": 12.5
+      },
+      {
+        "itemId": "itemB",
+        "costEur": 7.9
+      },
+      {
+        "itemId": "itemC",
+        "costEur": 5.2
+      }
+    ]
+  },
+  {
+    "customerId": "customer2",
+    "items": [
+      {
+        "itemId": "itemC",
+        "costEur": 5.2
+      },
+      {
+        "itemId": "itemD",
+        "costEur": 2.5
+      }
+    ]
+  }
+]
+```
+
+
 ## Additional information
 
 - [Quick installation and run guide](install.md)
