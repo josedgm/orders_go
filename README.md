@@ -47,7 +47,8 @@ The last 2 endpoints contain a function to convert the data into the required JS
 - Since the list of all items purchased by an individual customer does not contains the related orderId per item, the returning the list of customer items in the batch processor only has unique items. If an item was ordered in several orders by the same client, it will show only once. 
 - This also assumes that the item price is the same for all the orders.
 - No authentication nor authorization are implemented.
-- The server is working in plain HTTP. This code is not meant to be production ready. A reverse proxy is recommended.  
+- The server is working in plain HTTP. This code is not meant to be production ready. A reverse proxy is recommended.
+- The batch process is not stopped when there is a validation error in a single order. The validation errors are logged right now for simplicity. A better response, along with the validation errors can be implemented in the future. However, the user receives an error if the JSON is malformed.  
 
 ## Other remarks about the Batch Transform Endpoint
 
